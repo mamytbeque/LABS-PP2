@@ -1,6 +1,7 @@
 import os
 os.chdir("mian")
-for i in range(26):
-        letter = chr(ord('A') + i)
-        filename = letter + ".txt"
-        file = open(filename, 'w')
+
+with open("1.py", 'r') as source:
+    with open("copied.txt", 'w') as copy:
+        for line in source:
+            copy.write(line)
